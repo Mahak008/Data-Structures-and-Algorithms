@@ -9,9 +9,8 @@ bool fascinating(int n) {
   string s3 = to_string(three); // convert multiplied with 3 to string
         
   string s = s1 + s2 + s3; // concat all the strings
-        
-  int a = 123456789;
-  string str = to_string(a); // convert int to str
+    
+  string str = "123456789";
   sort(s.begin(), s.end());
         
   if(str == s) {
