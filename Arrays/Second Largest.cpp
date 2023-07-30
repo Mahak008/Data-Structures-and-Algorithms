@@ -21,3 +21,34 @@ int print2largest(int arr[], int n) {
   }
   return ans;
 }
+
+//Second Method
+// Function returns the second
+// largest elements
+int print2largest(int arr[], int n) {
+  int large = 0, second = -1, ans = 0;
+
+  // finding the largest element in the array
+  for (int i = 1; i < n; i++) {
+    if (arr[i] > arr[large]) {
+      large = i;   
+    }
+  }
+
+  // finding the largest element in the array excluding
+  // the largest element calculated above
+  for (int i = 0; i < n; i++) {
+    if (arr[i] != arr[large]) {
+      if (arr[i] > arr[second]) {
+        second = i;
+      }
+    }
+  }
+        
+  if(second == -1) {
+    return -1;
+  }
+        
+  ans = arr[second];
+  return ans;
+}
