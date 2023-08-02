@@ -21,7 +21,6 @@ int countOccurence(int arr[], int n, int k) {
 // N = 8
 // arr[] = {3,1,2,2,1,2,3,3}
 // k = 4
+
 // Output: 2
-// Explanation: In the given array, 3 and
-//  2 are the only elements that appears 
-// more than n/k times.
+// Explanation: In the given array, 3 and 2 are the only elements that appears more than n/k times.
