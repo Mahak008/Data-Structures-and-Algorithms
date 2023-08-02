@@ -20,3 +20,10 @@ bool fascinating(int n) {
     return false;
   }
 }
+
+// Input: 
+// N = 192
+
+// Output: Fascinating
+
+// Explanation: After multiplication with 2 and 3, and concatenating with original number, number will become 192384576 which contains all digits from 1 to 9.
