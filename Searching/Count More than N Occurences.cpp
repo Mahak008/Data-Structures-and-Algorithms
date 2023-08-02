@@ -23,4 +23,5 @@ int countOccurence(int arr[], int n, int k) {
 // k = 4
 
 // Output: 2
+
 // Explanation: In the given array, 3 and 2 are the only elements that appears more than n/k times.
