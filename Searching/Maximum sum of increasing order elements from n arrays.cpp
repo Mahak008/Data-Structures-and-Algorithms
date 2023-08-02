@@ -22,7 +22,7 @@ int maximumSum( int n,int m, vector<vector<int>> &a) {
 }
 
 // Input : arr[ ] = {{1,7,4,3}, {4,2,5,1}, {9,5,1,8}}
+
 // Output : 18
-// Explanation:
-// We can select 4 from the first array,
-// 5 from second array and 9 from the third array.
+
+// Explanation: We can select 4 from the first array, 5 from second array and 9 from the third array.
