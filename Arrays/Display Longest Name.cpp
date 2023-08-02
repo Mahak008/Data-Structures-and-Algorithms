@@ -10,3 +10,11 @@ string longest(string names[], int n) {
   }
   return s;
 }
+
+// Input:
+// N = 5
+// names[] = { "Geek", "Geeks", "Geeksfor",
+//   "GeeksforGeek", "GeeksforGeeks" }
+
+// Output:
+// GeeksforGeeks
