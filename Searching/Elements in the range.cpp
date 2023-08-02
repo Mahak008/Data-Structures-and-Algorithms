@@ -17,4 +17,5 @@ bool check_elements(int arr[], int n, int A, int B) {
 // arr[] =  {1, 4, 5, 2, 7, 8, 3}
 
 // Output: Yes
+
 // Explanation: It has elements between range 2-5 i.e 2,3,4,5
