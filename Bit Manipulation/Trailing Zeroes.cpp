@@ -5,7 +5,7 @@ int solve(int A) {
             count++;
         }
         else {
-        break;
+            break;
         }
         A /= 2;
     }
