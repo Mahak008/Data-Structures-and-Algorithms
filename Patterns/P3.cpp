@@ -6,8 +6,8 @@ for(i = 0; i < n; i++) {
         
   char ch = 'A';
   int breakpoint = (2*i)/2;
-  for(j = 1; j <= 2*i+1; j++) {
-    if(j <= breakpoint) {
+  for(j = 0; j < 2*i+1; j++) {
+    if(j < breakpoint) {
       cout << ch++;
     }
     else {
