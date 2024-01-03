@@ -15,3 +15,7 @@ for(int i = 0; i < 8;i++) {
     }
 }
 cout<<x<<endl<<y;
+
+// Output -
+// 7
+// 9
