@@ -8,7 +8,7 @@ else {
 }
 
 // Another method
-int n = 5, k = 3;
+int n = 5, k = 2;
 int n1 = 1 << (k-1);
 if(n1 & n) {
   cout << '1';
