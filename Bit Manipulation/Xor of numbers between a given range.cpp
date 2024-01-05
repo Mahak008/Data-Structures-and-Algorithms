@@ -22,8 +22,9 @@ int main() {
     int n = 2, m = 4;
     int a = x_o_r(n-1);
     int b = x_o_r(m);
-    cout << "a ^ b = " << (a ^ b) << endl;
+    cout << "n ^ m = " << (a ^ b) << endl;
     return 0;
 }
 
-// Output - 5
+// Output - 
+// n ^ m = 5
