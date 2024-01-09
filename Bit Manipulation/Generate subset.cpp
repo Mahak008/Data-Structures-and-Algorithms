@@ -8,7 +8,7 @@ for(int num = 0; num < (1 << n); num++) { // 2^n-1  >> No. of subsets
   vector <int> ds; // empty vector
   
   for(int bit = 0; bit < n; bit++) { 
-    if(num & (1 << bit)) {
+    if(num & (1 << bit)) { // If ith bit in counter is set, Print ith element from set for this subset
       ds.push_back(arr[bit]);
     }
   }
