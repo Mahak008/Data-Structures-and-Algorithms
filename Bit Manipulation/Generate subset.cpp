@@ -1,4 +1,5 @@
 // Power set algorithm
+// High Time Complexity - n * 2^n
 
 int arr[] = {3,2,4};
 int n = sizeof(arr)/sizeof(arr[0]); // size of array
