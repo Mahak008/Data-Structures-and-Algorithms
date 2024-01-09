@@ -1,3 +1,5 @@
+// Power set algorithm
+
 int arr[] = {3,2,4};
 int n = sizeof(arr)/sizeof(arr[0]); // size of array
 
