@@ -1,5 +1,5 @@
 // Power set algorithm
-// High Time Complexity - n * 2^n
+// High Time Complexity - n * 2^n, so this will work only for values of n below 20.
 
 int arr[] = {3,2,4};
 int n = sizeof(arr)/sizeof(arr[0]); // size of array
