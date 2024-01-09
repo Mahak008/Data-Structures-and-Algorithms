@@ -17,7 +17,7 @@ for(int num = 0; num < (1 << n); num++) { // 2^n-1  >> No. of subsets
 }
 
 // Working
-//     2 1 0
+//     2 1 0 - (Power of 2 - 4, 2, 1)
 // 0 | 0 0 0 - {}
 // 1 | 0 0 1 - {3}
 // 2 | 0 1 0 - {2}
