@@ -1,4 +1,4 @@
-### This repository contains all the questions that I am solving while learning Data Structures and Algorithms (DSA) through CPlusPlus.
+### This repository contains all the Topicwise Questions that I am solving while learning Data Structures and Algorithms (DSA) through CPlusPlus.
 
 ### Resources -
 <ul>
