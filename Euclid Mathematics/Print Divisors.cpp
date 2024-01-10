@@ -1,17 +1,17 @@
 int n = 120;
 int dig = int(sqrt(n));
-set <int> s;
+vector <int> v;
 for(int i = 1; i <= dig; i++) {
   if(n % i == 0) {
-    s.insert(i);
+    v.push_back(i);
 
     if((n/i) != i) {
-      s.insert(n/i);
+      v.push_back(n/i);
     }
   }
  }
-
-for(auto it : s) {
+sort(v.begin(), v.end());
+for(auto it : v) {
   cout << it << endl;
 }
 
