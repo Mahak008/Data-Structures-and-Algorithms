@@ -20,3 +20,5 @@ for (int p = 2; p < n; p++) {
 
 // Output - 
 // 2 3 5 7 11 13 17 19 
+
+// Time Complexity - (n * log(log(n))) 
