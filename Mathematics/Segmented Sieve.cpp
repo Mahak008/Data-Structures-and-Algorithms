@@ -2,7 +2,7 @@
 using namespace std;
 
 int N = 1000000;
-bool sieve [N + 1];
+vector <bool> sieve(N + 1, true);
 
 void createSieve() {
   for(int i = 2; i <= N;i++) {
@@ -25,6 +25,7 @@ vector<int> generatePrimes (int N) {
       ds.push_back(i);
     }
   }
+  return ds;
 }
 
 int main() {
