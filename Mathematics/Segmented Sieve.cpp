@@ -52,9 +52,9 @@ int main() {
     }
   }
 
-  // step4: get all the primes
+  // step 4: get all the primes
   for(int i = l; i <= r; i++) {
-    if(dummy [i-l] == 1) {  
+    if(dummy[i-l] == 1) {  
       cout << i << " ";
     }
   }
