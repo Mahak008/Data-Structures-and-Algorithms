@@ -17,5 +17,4 @@ cout << v[r];
 
 
 // Output -
-// 3
-// 2 is the smallest prime factor of 3 6, 15
+// 3 is the smallest prime factor of 3 6, 15
