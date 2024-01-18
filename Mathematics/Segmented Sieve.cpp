@@ -37,7 +37,7 @@ int main() {
 
   // step2 : Create a dummy array of size (R - L + 1) as 1
   int dummy [r - 1 + 1];
-  for(int i = 0; i <= (r-l+1); i++) {
+  for(int i = 0; i < (r-l+1); i++) {
     dummy [i] = 1;
   }
 
@@ -47,14 +47,14 @@ int main() {
     if(firstMultiple < 1) { 
       firstMultiple += pr;
     }
-    for(int j = max(firstMultiple, pr*ps); j<=r; j+= pr) {
-      dummy [j-1] = 0;
+    for(int j = max(firstMultiple, pr*pr); j <= r; j += pr) {
+      dummy [j-l] = 0;
     }
   }
 
   // step4: get all the primes
-  for(int i=1;i<=r;i++) {
-    if(dummy [i-1] == 1) {  
+  for(int i = l; i <= r; i++) {
+    if(dummy [i-l] == 1) {  
       cout << i << " ";
     }
   }
