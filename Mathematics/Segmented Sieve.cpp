@@ -30,5 +30,34 @@ vector<int> generatePrimes (int N) {
 
 int main() {
   createSieve();
-  // step 1: generate all primes till sqrt(r)
+  int l = 110 , r = 130 ;
+  
+  // step 1: Generate all primes till sqrt(r)
+  vector <int> primes = generatePrimes(sqrt(r));
+
+  // step2 : Create a dummy array of size (R - L + 1) as 1
+  int dummy [r - 1 + 1];
+  for(int i = 0; i <= (r-l+1); i++) {
+    dummy [i] = 1;
+  }
+
+  // step 3 : For all prime number marks its multiples as false
+  for(auto pr: primes) {
+    int firstMultiple = (l/pr) * pr;
+    if(firstMultiple < 1) { 
+      firstMultiple += pr;
+    }
+    for(int j = max(firstMultiple, pr*ps); j<=r; j+= pr) {
+      dummy [j-1] = 0;
+    }
+  }
+
+  // step4: get all the primes
+  for(int i=1;i<=r;i++) {
+    if(dummy [i-1] == 1) {  
+      cout << i << " ";
+    }
+  }
+  cout << endl;
+  return 0;
 }
