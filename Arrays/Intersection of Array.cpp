@@ -1,15 +1,29 @@
+vector <int> v1{1, 2, 3, 4, 4};
+vector <int> v2{1, 2, 2, 3, 4, 4, 8};
 vector <int> ans;
-for(int i = 0; i < arr1.size(); i++) {
-  int ele = arr1[i];
-  for(int j = 0; j < arr2.size(); j++) {
-    if(ele < arr2[j]) {
+for(unsigned i = 0; i < v1.size(); i++) {
+  
+  int ele = v1[i];
+
+  for(unsigned j = 0; j < v2.size(); j++) {
+    if(ele < v2[j]) {
       break;
     }
 
-    if(arr2[j] == ele) {
+    if(v2[j] == ele) {
       ans.push_back(ele);
-      arr2[j] == INT_MIN;
+      v2[j] = INT_MIN;
       break;
     }
   }
 }
+for(auto i : ans) {
+    cout << i << endl;
+}
+
+// Output -
+// 1
+// 2
+// 3
+// 4
+// 4
