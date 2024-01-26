@@ -1,5 +1,5 @@
-vector <int> v1{1, 2, 3, 4, 4};
-vector <int> v2{1, 2, 2, 3, 4, 4, 8};
+vector <int> v1{1, 2, 3, 4, 40};
+vector <int> v2{ 3, 4, 4, 8};
 vector <int> ans;
 
 for(unsigned i = 0; i < v1.size(); i++) {
@@ -49,8 +49,5 @@ for(auto it : ans) {
 }
 
 // Output -
-// 1
-// 2
 // 3
-// 4
 // 4
