@@ -13,7 +13,7 @@ for(unsigned i = 0; i < v1.size(); i++) {
 
     if(v2[j] == ele) {
       ans.push_back(ele);
-      v2[j] = INT_MIN;
+      v1[i] = INT_MIN;
       break;
     }
   }
