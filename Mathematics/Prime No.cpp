@@ -11,7 +11,7 @@ for(int i = 2; i*i <= n; i++) {
   }
 }
 
-if(cnt == 2) {
+if(cnt >= 2) {
     cout << "No";
 } 
 else {
