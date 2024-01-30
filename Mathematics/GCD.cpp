@@ -7,5 +7,25 @@ for(int i = n; i >= 1; i--) {
     }
 }
 
+// Optimised Approach
+
+if(n == 0 || n == m) {
+        return m;
+}
+
+if(m == 0) {
+  return n;
+}
+
+if (n > m) {
+  if (n % m == 0)
+    return m;
+  return calcGCD(n - m, m);
+}
+
+if (m % n == 0)
+  return n;
+return calcGCD(n, m - n);
+
 // Output - 
 // 1
