@@ -18,6 +18,15 @@ vector<int> rotateArray(vector<int>arr, int k) {
     return v;
 }
 
+// Optimized Approach
+void rotate(vector<int>& arr, int k) {
+  int n = arr.size();
+  k = k % n;
+  reverse(arr.begin(), arr.begin() + k);
+  reverse(arr.begin() + k, arr.begin() + n);
+  reverse(arr.begin(), arr.begin() + n);
+}
+
 // Input :
 // 7 5 2 11 2 43 1 1
 // 2
