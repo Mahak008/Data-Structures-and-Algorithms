@@ -1,4 +1,4 @@
-int row = 7, col = 5, seat = 38;
+int row = 7, col = 5, seat = 31
     
 if(row*col < seat) {
   cout << 0 << endl;
