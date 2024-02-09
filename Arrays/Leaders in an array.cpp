@@ -18,5 +18,20 @@ vector<int> superiorElements(vector<int>&a) {
     return v;
 }
 
+// Optimal Approach
+vector<int> superiorElements(vector<int>&a) {
+    vector <int> v;
+    int n = a.size();
+    v.push_back(a[n-1]);
+    int max_now = a[n-1];
+    for(int i = n-2; i >= 0; i--) {
+        if(a[i] > max_now) {
+            v.push_back(a[i]);
+        }
+        max_now = max(max_now, a[i]);
+    }
+    return v;
+}
+
 // Input : 5 4 3
 // Output : 3 4 5 
