@@ -16,4 +16,7 @@ string read(int n, vector<int> book, int target) {
   return "NO";
 }
 
+// TARGET = 5
+// BOOK = 4, 1, 2, 3, 1 
+
 // Not applicable if we have to find the index of no whose sum is equal to target.
