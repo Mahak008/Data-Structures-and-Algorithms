@@ -10,7 +10,9 @@ while(n > 0) {
   n = n >> 1;
   i++;
 }
-    
+
+// OR
+
 int rem, res = 0;
 while(ans > 0) {
   rem = ans % 10;
