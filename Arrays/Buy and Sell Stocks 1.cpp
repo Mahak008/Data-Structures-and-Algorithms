@@ -1,3 +1,5 @@
+// Choose a single day to buy one stock and choose a different day in the future to sell that stock.
+
 int bestTimeToBuyAndSellStock(vector<int>&prices) {
     int ans = 0;
     int n = prices.size();
