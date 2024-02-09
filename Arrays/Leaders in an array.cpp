@@ -18,7 +18,7 @@ vector<int> superiorElements(vector<int>&a) {
     return v;
 }
 
-// Optimal Approach
+// Optimal Approach - If an element is greater than the maximum element on its right, it is the leader element.
 vector<int> superiorElements(vector<int>&a) {
     vector <int> v;
     int n = a.size();
