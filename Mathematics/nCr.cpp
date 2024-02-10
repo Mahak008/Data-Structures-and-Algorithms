@@ -6,3 +6,5 @@ int nCr(int n, int r) {
   }
   return res;
 }
+
+// Find the value of particular place in Pascal's triangle
