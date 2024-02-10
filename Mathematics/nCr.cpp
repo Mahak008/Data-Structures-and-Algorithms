@@ -7,4 +7,4 @@ int nCr(int n, int r) {
   return res;
 }
 
-// Find the value of particular place in Pascal's triangle
+// Find the value of particular place in Pascal's triangle => (row-1)C(col-1)
