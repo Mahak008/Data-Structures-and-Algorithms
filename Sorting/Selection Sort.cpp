@@ -10,7 +10,7 @@ for(int i = 0; i <= n-2; i++) {
   swap(arr[mini], arr[i]);
 }
 
-// Iteration in each step
+// Output after each iteration:
 // 9 46 24 52 20 13 
 // 9 13 24 52 20 46 
 // 9 13 20 52 24 46 
