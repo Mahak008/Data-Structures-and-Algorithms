@@ -11,7 +11,6 @@ for(int i = n-1; i >= 0; i--) {
   if(sw == 0) {
     break;
   }
-  cout << endl;
 }
 
 // Iteration in each step :-
