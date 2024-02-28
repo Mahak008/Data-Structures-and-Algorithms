@@ -13,7 +13,7 @@ for(int i = n-1; i >= 0; i--) {
   }
 }
 
-// Iteration in each step :-
+// Output after each Iteration:
 // 13 24 46 52 20 9 
 // 13 24 46 20 52 9 
 // 13 24 46 20 9 52 
