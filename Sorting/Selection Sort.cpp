@@ -1,5 +1,4 @@
 int arr[] = {13, 46, 24, 52, 20, 9};
-int n = sizeof(arr)/sizeof(arr[0]);
 
 for(int i = 0; i <= n-2; i++) {
   int mini = i;
@@ -11,6 +10,7 @@ for(int i = 0; i <= n-2; i++) {
   swap(arr[mini], arr[i]);
 }
 
+// Iteration in each step
 // 9 46 24 52 20 13 
 // 9 13 24 52 20 46 
 // 9 13 20 52 24 46 
