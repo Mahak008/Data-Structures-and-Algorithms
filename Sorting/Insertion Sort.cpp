@@ -8,7 +8,7 @@ for(int i = 0; i <= n-1; i++) {
   }
 }
 
-// Output after each iteration
+// Output after each Iteration:
 // 13 24 46 52 20 9 
 
 // 13 24 46 20 52 9 
