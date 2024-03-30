@@ -1,4 +1,7 @@
-void merge(vector<int> arr, int low, int mid, int high) {
+#include <bits/stdc++.h>
+using namespace std;
+
+void merge(vector<int>& arr, int low, int mid, int high) {
   int left = low, right = mid+1;
   vector<int> temp;
   while(left <= mid && right <= high) {
@@ -22,17 +25,26 @@ void merge(vector<int> arr, int low, int mid, int high) {
     right++;
   }
 
-  for(int i = low, i <= high; i++) {
+  for(int i = low; i <= high; i++) {
     arr[i] = temp[i - low];
   }
 }
 
-void mergeSort(vector <int> arr, int low, int high) {
+void mergeSort(vector<int>& arr, int low, int high) {
   if(low == high) {
     return;
   }
-  int mid = (low + (high - low))/2;
+  int mid = (low + high) / 2;
   mergeSort(arr, low, mid);
   mergeSort(arr, mid+1, high);
   merge(arr, low, mid, high);
+}
+
+int main() {
+    vector<int> arr = {3,5,6,7,8,9,1,2,3,4,5};
+    mergeSort(arr, 0, 10);
+    for(int num : arr) {
+        cout << num << " ";
+    }
+    return 0;
 }
