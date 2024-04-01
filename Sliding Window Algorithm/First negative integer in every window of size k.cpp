@@ -1,8 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<long long> printFirstNegativeInteger(vector<long long> &A,
-                                            long long int N, long long int K) {
+vector<long long> printFirstNegativeInteger(vector<long long> &A, long long int N, long long int K) {
     vector<long long> ans;
     queue<long long> q;
     int i = 0, j = 0;
