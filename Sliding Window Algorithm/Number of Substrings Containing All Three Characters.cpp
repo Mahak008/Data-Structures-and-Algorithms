@@ -26,3 +26,7 @@ int countSubstring(string s) {
   }
   return cnt;
 }
+
+// Input: s = "abcabc"
+// Output: 10
+// Explanation:"abc", "abca", "abcab", "abcabc", "bca", "bcab", "bcabc", "cab", "cabc" and "abc". 
