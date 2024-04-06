@@ -15,3 +15,14 @@ int countSubstring(string s) {
 }
 
 // Optimised Approach
+int countSubstring(string s) {
+  int ch[3] = {-1, -1, -1};
+  int cnt = 0;
+  for (int i = 0; i < s.length(); i++) {
+    ch[s[i] - 'a'] = i;
+    if (ch[0] != -1 && ch[1] != -1 && ch[2] != -1) {
+      cnt += (1 + min({ch[0], ch[1], ch[2]}));
+    }
+  }
+  return cnt;
+}
