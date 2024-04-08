@@ -19,7 +19,7 @@
   </li>
 
   <li>
-    Questionnaire -
+    Solving Sheets -
     <ul type="square">
       <li> - <a href="https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/">Striver's A2Z Sheet</a></li>
     </ul>
