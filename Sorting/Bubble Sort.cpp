@@ -1,3 +1,4 @@
+// Push largest element at the end
 int arr[] = {13, 46, 24, 52, 20, 9};
 
 for(int i = n-1; i >= 0; i--) {
