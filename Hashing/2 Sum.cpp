@@ -5,8 +5,7 @@ vector<int> twoSum(vector<int>& nums, int target) {
     int x = nums[i];
     int rem = target - x;
     if(mp.find(rem) != mp.end()) {
-      v.push_back(mp[rem]);
-      v.push_back(i);
+      v = {mp[rem], i};
     }
     else {
       mp[x] = i;
