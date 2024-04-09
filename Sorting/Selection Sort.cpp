@@ -1,3 +1,5 @@
+// Push smallest element in the beginning
+
 int arr[] = {13, 46, 24, 52, 20, 9};
 
 for(int i = 0; i <= n-2; i++) {
