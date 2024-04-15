@@ -30,4 +30,4 @@ int minimumRateToEatBananas(vector<int> piles, int h) {
 }
 
 // Input: piles = [30,11,23,4,20], h = 5
-// Output: 30
+// Output: 30 - number of bananas to be eaten in 1 hour so as to eat all the bananas in 5 hours.
