@@ -33,11 +33,26 @@ int maxi(vector<int> v) {
   return m;
 }
 int minDays(vector<int> &bloomDay, int m, int k) {
-  int start = mini(bloomDay), end = maxi(bloomDay);
-  for (int i = start; i <= end; i++) {
+  int low = mini(bloomDay), high = maxi(bloomDay);
+  for (int i = low; i <= high; i++) {
     if (possible(bloomDay, i, m, k)) {
       return i;
     }
   }
   return -1;
+}
+
+// Optimized Approach
+int minDays(vector<int> &bloomDay, int m, int k) {
+  int low = mini(bloomDay), high = maxi(bloomDay), ans = -1;
+  while (low <= high) {
+    int mid = (low + high) / 2;
+    if (possible(bloomDay, mid, m, k)) {
+      ans = mid;
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return ans;
 }
