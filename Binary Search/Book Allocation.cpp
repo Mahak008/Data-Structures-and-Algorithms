@@ -1,35 +1,47 @@
-#include <iostream>
-#include <vector>
-#include <algorithm> // for max_element
-#include <numeric>   // for accumulate
-
-int students(const std::vector<int>& arr, int pages) {
-    int stu = 1;
-    long long pagestu = 0; 
-    for(int i = 0; i < arr.size(); i++) {
-        if(pagestu + arr[i] <= pages) {
-            pagestu += arr[i];
-        } else {
-            stu += 1;
-            pagestu = arr[i];
-        }
-    }
-    return stu;
+int sum(vector<int> &nums) {
+  int agg = 0;
+  for (int i = 0; i < nums.size(); i++) {
+    agg += nums[i];
+  }
+  return agg;
 }
 
-int findPages(std::vector<int>& arr, int n, int m) {
-    if(m > n) return -1;
-    int low = *std::max_element(arr.begin(), arr.end());
-    int high = std::accumulate(arr.begin(), arr.end(), 0);
-    while(low <= high) {
-        int mid = (low + high) / 2;
-        int stu = students(arr, mid);
-        if(stu > m) {
-            low = mid + 1;
-        } else {
-            high = mid - 1;
-        }
-    }
-    return low;
+int maxEle(vector<int> nums) {
+  sort(nums.begin(), nums.end());
+  return nums[nums.size() - 1];
 }
 
+int subarr(vector<int> &nums, int sum) {
+  int start = 0;
+  int a = 1;
+  for (int i = 0; i < nums.size(); i++) {
+    if (start + nums[i] <= sum) {
+      start += nums[i];
+    } else {
+      a += 1;
+      start = nums[i];
+    }
+  }
+  return a;
+}
+
+int splitArray(vector<int> &nums, int k) {
+  int low = maxEle(nums);
+  int high = sum(nums);
+  while (low <= high) {
+    int mid = (low + high) / 2;
+    int x = subarr(nums, mid);
+    if (x > k) {
+      low = mid + 1;
+    } else {
+      high = mid - 1;
+    }
+  }
+  return low;
+}
+
+
+// Input: nums = [7,2,5,10,8], k = 2
+// Output: 18
+// Explanation: There are four ways to split nums into two subarrays.
+// The best way is to split it into [7,2,5] and [10,8], where the largest sum among the two subarrays is only 18.
