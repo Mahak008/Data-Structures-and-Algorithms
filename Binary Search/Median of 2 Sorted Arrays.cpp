@@ -1,3 +1,5 @@
+// Brute Force Approach
+
 double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
   vector<int> arr;
   int i = 0, j = 0;
@@ -23,3 +25,5 @@ double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
   }
   return (double)((double)(arr[arr.size()/2]) + (double) (arr[arr.size()/2+1]))/2.0;
 }
+
+// Binary Search Approach
