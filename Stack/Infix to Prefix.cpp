@@ -1,7 +1,8 @@
-// If operand, print
-// If '(' push to stack
-// If ')' pop from stack and print until '(' is found
-// If operator, pop from stack and print until an operator with less precedence is found
+// Reverse the infix expression.
+// Change the parentheses.
+// Convert the modified expression to postfix.
+// Reverse the postfix expression to get the prefix expression.
+
 
 #include<bits/stdc++.h>
 using namespace std;
