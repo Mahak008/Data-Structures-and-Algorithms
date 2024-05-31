@@ -1,3 +1,9 @@
+// If operand, add to output.
+// If '(', push to stack.
+// If ')', pop from stack to output until '(' is found.
+// If operator, pop from stack to output until an operator with less precedence is found or stack is empty, then push current operator.
+// After reading the expression, pop all operators from the stack to the output.
+
 #include <bits/stdc++.h>
 using namespace std;
 
