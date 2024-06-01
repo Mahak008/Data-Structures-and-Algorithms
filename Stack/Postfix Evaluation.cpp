@@ -7,14 +7,17 @@
 int evaluatePostfix(string S) {
   stack<int> s;
   int len = S.length();
+  
   for (int i = 0; i < len; i++) {
     if (isdigit(S[i])) {
       s.push(S[i] - '0');
-    } else {
+    } 
+    else {
       int op1 = s.top();
       s.pop();
       int op2 = s.top();
       s.pop();
+      
       switch (S[i]) {
       case '+':
         s.push(op2 + op1);
