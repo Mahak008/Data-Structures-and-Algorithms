@@ -1,7 +1,8 @@
-// Reverse the infix expression.
-// Change the parentheses.
-// Convert the modified expression to postfix.
-// Reverse the postfix expression to get the prefix expression.
+// Algorithm
+// 1. Reverse the infix expression.
+// 2. Change the parentheses.
+// 3. Convert the modified expression to postfix.
+// 4. Reverse the postfix expression to get the prefix expression.
 
 
 #include<bits/stdc++.h>
