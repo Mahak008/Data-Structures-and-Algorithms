@@ -11,11 +11,13 @@ int evaluatePrefix(string S) {
   for (int i = len - 1; i >= 0; i--) {
     if (isdigit(S[i])) {
       s.push(S[i] - '0');
-    } else {
+    } 
+    else {
       int op1 = s.top();
       s.pop();
       int op2 = s.top();
       s.pop();
+    
       switch (S[i]) {
       case '+':
         s.push(op1 + op2);
