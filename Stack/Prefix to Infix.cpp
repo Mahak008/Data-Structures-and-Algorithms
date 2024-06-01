@@ -23,13 +23,9 @@ public:
   }
 
   string postToInfix(string exp) {
-    // Write your code here
     stack<string> s;
-
-    // length of expression
     int length = exp.size();
 
-    // reading from right to left
     for (int i = 0; i < length; i++) {
 
       // check if symbol is operator
@@ -50,10 +46,8 @@ public:
 
       // if symbol is an operand
       else {
-
         // push the operand to the stack
-        s.push(string(1, exp[i])); // here it is a stack of strings, so we have
-                                   // to convert the character to string.
+        s.push(string(1, exp[i])); // here it is a stack of strings, so we have to convert the character to string.
         // string(1, pre_exp[i]), the 1 specifies the number of times the
         // character pre_exp[i] should be repeated in the new string being
         // created.
