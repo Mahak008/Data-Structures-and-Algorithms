@@ -52,7 +52,8 @@ string preToInfix(string pre_exp) {
 	  else {
 
 	    // push the operand to the stack
-	    s.push(string(1, pre_exp[i]));
+	    s.push(string(1, pre_exp[i])); // here it is a stack of strings, so we have to convert the character to string.
+	    // string(1, pre_exp[i]), the 1 specifies the number of times the character pre_exp[i] should be repeated in the new string being created.
 	  }
   }
 
