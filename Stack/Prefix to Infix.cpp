@@ -7,8 +7,6 @@
 // Repeat the above steps until the end of Prefix expression.
 // At the end stack will have only 1 string i.e resultant string
 
-#include <bits/stdc++.h>
-using namespace std;
 
 // function to check if character is operator or not
 bool isOperator(char x) {
