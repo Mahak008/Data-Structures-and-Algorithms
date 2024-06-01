@@ -26,12 +26,12 @@ string preToPost(string pre_exp) {
     if (!isOperator(pre_exp[i])) {
       s.push(string(1, pre_exp[i]));
     } else {
-      string s1 = s.top();
+      string op1 = s.top();
       s.pop();
-      string s2 = s.top();
+      string op2 = s.top();
       s.pop();
 
-      string ans = s1 + s2 + pre_exp[i];
+      string ans = op1 + op2 + pre_exp[i];
       s.push(ans);
     }
   }
