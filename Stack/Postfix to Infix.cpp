@@ -7,7 +7,7 @@
 
 
 bool isOperand(char x) {
-  return (x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z');
+  return isalpha(x) || isdigit(x);
 }
 
 string getInfix(string exp) {
