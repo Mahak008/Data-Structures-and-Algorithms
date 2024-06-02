@@ -15,5 +15,38 @@ int getMin() {
   }
   return m;
 }
+ 
+// Alternate Approach - 
+// Time Complexity: O(1)
+// Space Complexity: O(2N)
+  
+stack < pair < int, int >> st;
+int mini;
+void push(int val) {
+  if(st.empty()) {
+    mini = val;
+  }
+  else {
+    mini = min(st.top().second, val);
+  }
+  st.push({val, mini});
+}
+    
+void pop() {
+  st.pop();
+}
+    
+int top() {
+  return st.top().first;
+}
+    
+int getMin() {
+  return st.top().second;
+}
 
 // Alternate Approach
+// Time Complexity: O(1)
+// Space Complexity: O(N)
+
+
+  
