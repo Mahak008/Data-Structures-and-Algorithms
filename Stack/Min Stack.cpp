@@ -72,12 +72,10 @@ void pop() {
     cout << -1;
     return;
   }
-  long long top = st.top();
-  st.pop();
-        
-  if(top < mini) {
-    mini = 2 * mini - top; // Revert mini to previous minimum
+  if(st.top() < mini) {
+    mini = 2 * mini - st.top(); // Revert mini to previous minimum
   }
+  st.pop();
 }
     
 int top() {
