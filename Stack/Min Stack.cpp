@@ -48,5 +48,48 @@ int getMin() {
 // Time Complexity: O(1)
 // Space Complexity: O(N)
 
+stack <long long> st;
+long long mini = INT_MAX;
 
-  
+void push(int val) {
+  if(st.empty()) {
+    mini = val;
+    st.push(val);
+  }
+  else{
+    if(val < mini) {
+      st.push(2LL * val - mini);
+      mini = val;
+    }
+    else {
+      st.push(val);
+    }
+  } 
+}
+    
+void pop() {
+  if(st.empty()) {
+    cout << -1;
+    return;
+  }
+  long long top = st.top();
+  st.pop();
+        
+  if(top < mini) {
+    mini = 2 * mini - top; // Revert mini to previous minimum
+  }
+}
+    
+int top() {
+  if(st.empty()) return -1; // Handle empty stack
+  long long top = st.top();
+  if(top < mini) {
+    return mini; // Return the current minimum value
+  }
+  return top;
+}
+    
+int getMin() {
+  if(st.empty()) return -1; // Handle empty stack
+  return mini;
+}
