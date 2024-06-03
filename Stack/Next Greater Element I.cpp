@@ -45,3 +45,6 @@ vector<int> nextGreaterElement(vector<int>& nums1, vector<int>& nums2) {
   }
   return ans;
 }
+
+// Input: nums1 = [2,4], nums2 = [1,2,3,4]
+// Output: [3,-1]
