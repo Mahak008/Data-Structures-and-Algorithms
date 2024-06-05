@@ -1,4 +1,4 @@
-vector<int> help_classmate(vector<int> arr, int n) { 
+vector<int> rightSmaller(vector<int> arr, int n) { 
   stack <int> st;
   vector <int> v;
   for(int i = n-1; i >= 0; i--) {
