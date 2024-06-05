@@ -1,35 +1,30 @@
-
-vector<int> leftSmaller(vector<int>& arr, int n) {
-    vector<int> left(n);
-    stack<int> st;
+vector<int> leftSmaller(vector<int> a, int n) {
+    vector<int> left(n, -1);
+    stack<pair<int, int>> st;
 
     for (int i = 0; i < n; i++) {
-        while (!st.empty() && arr[st.top()] >= arr[i]) {
+        while (!st.empty() && st.top().first >= a[i]) {
             st.pop();
         }
-        if (st.empty()) {
-            left[i] = -1;
-        } else {
-            left[i] = st.top();
+        if (!st.empty()) {
+            left[i] = st.top().second;
         }
-        st.push(i);
+        st.push({a[i], i});
     }
     return left;
 }
 
-vector<int> rightSmaller(vector<int>& arr, int n) {
-    vector<int> right(n);
-    stack<int> st;
+vector<int> rightSmaller(vector<int> arr, int n) {
+    stack<pair<int, int>> st;
+    vector<int> right(n, n);
     for (int i = n - 1; i >= 0; i--) {
-        while (!st.empty() && arr[st.top()] >= arr[i]) {
+        while (!st.empty() && st.top().first >= arr[i]) {
             st.pop();
         }
-        if (st.empty()) {
-            right[i] = n;
-        } else {
-            right[i] = st.top();
+        if (!st.empty()) {
+            right[i] = st.top().second;
         }
-        st.push(i);
+        st.push({arr[i], i});
     }
     return right;
 }
