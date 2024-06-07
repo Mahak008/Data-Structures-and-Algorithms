@@ -20,3 +20,6 @@ void sortStack(stack<int>& st) {
     sortStack(st);
     insertSorted(st, topElement);
 }
+
+// Input : 5, -2, 9, -7, 3
+// Output: 9, 5, 3, -2, -7 in reverse order
