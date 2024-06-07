@@ -29,3 +29,6 @@ int findMinimumCost(string str) {
   int ans = (a + 1) / 2 + (b + 1) / 2;
   return ans;
 }
+
+// Input: {}}{}}
+// Output: 1
