@@ -1,4 +1,3 @@
-#include <bits/stdc++.h> 
 bool findRedundantBrackets(string &s) {
     stack<char> st;
     for(int i = 0; i < s.length(); i++) {
