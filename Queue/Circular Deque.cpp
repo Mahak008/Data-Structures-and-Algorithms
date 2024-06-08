@@ -1,6 +1,6 @@
 class MyCircularDeque {
 private:
-    vector<int> data;
+    vector<int> cdq;
     int front;
     int rear;
     int size;
@@ -9,18 +9,18 @@ private:
 public:
     // Constructor: Initializes the deque with a maximum size of k
     MyCircularDeque(int k) { 
-      int data[k]; 
-      int front(0), 
-      int rear(0), 
-      int size(0), 
-      int capacity(k) 
+      capacity = k;
+      cdq.resize(capacity);
+      front = 0;
+      rear = 0;
+      size = 0;  
     }
 
     // Insert an item at the front of Deque
     bool insertFront(int value) {
         if (isFull()) return false;
         front = (front - 1 + capacity) % capacity;
-        data[front] = value;
+        cdq[front] = value;
         size++;
         return true;
     }
@@ -28,7 +28,7 @@ public:
     // Insert an item at the rear of Deque
     bool insertLast(int value) {
         if (isFull()) return false;
-        data[rear] = value;
+        cdq[rear] = value;
         rear = (rear + 1) % capacity;
         size++;
         return true;
@@ -53,13 +53,13 @@ public:
     // Get the front item from the Deque
     int getFront() {
         if (isEmpty()) return -1;
-        return data[front];
+        return cdq[front];
     }
 
     // Get the last item from Deque
     int getRear() {
         if (isEmpty()) return -1;
-        return data[(rear - 1 + capacity) % capacity];
+        return cdq[(rear - 1 + capacity) % capacity];
     }
 
     // Check if the deque is empty
