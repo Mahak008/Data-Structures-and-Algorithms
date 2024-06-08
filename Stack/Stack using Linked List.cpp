@@ -1,11 +1,3 @@
-// Advantages of Linked List implementation:
-// The linked list implementation of a stack can grow and shrink according to the needs at runtime.
-// It is used in many virtual machines like JVM.
-
-// Disadvantages of Linked List implementation:
-// Requires extra memory due to the involvement of pointers.
-// Random accessing is not possible in stack.
-
 class StackNode {
 public:
     int data;
