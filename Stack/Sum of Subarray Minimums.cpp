@@ -52,7 +52,7 @@ int sumSubarrayMins(vector<int>& arr) {
 // Output: 17
 
 // Input: 11, 81, 94, 43, 3
-// Left:
-// Right:
+// Left: 1, 1, 1, 3, 5
+// Right: 1, 1, 1, 2, 4
 // Output: 444
  
