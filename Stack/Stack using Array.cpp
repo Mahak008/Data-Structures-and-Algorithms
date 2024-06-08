@@ -1,12 +1,3 @@
-// A Stack is a linear data structure that follows  LIFO(Last In First Out) or FILO(First In Last Out). 
-// Applications:
-// Recursion
-// Expression Evaluation and Parsing
-// Depth-First Search (DFS)
-// Undo/Redo Operations
-// Browser History
-// Function Calls
-
 class MyStack {
   private:
     int arr[1000];
