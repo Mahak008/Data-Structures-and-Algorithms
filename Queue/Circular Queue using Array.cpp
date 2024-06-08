@@ -1,6 +1,10 @@
 // Last element of the queue is connected to the first element of the queue forming a circle.
 // The operations are performed based on FIFO (First In First Out) principle. It is also called ‘Ring Buffer’.
-// One of the benefits of the circular queue is that we can make use of the spaces in front of the queue. In a normal queue, once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue. But using the circular queue, we can use the space to store new values.
+// Advantage: we can make use of the spaces in front of the queue. In a normal queue, once the queue becomes full, we cannot insert the next element even if there is a space in front of the queue. But using the circular queue, we can use the space to store new values.
+// Applications:
+// (i) Memory Management
+// (ii) Traffic System
+// (iii) CPU Scheduling
 
 class MyCircularQueue {
     vector<int> cq;
