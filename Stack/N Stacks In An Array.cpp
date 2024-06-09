@@ -9,8 +9,8 @@ class NStack {
 public:
 
   NStack(int N, int S) {
-    n = N;
-    s = S;
+    n = N; // n: The number of stacks. This is the number of individual stacks that you want to manage within a single array.
+    s = S; // s: The size of the array that holds all the elements across all stacks. This is the total capacity for storing elements in all stacks combined.
     arr = new int[s];
     top = new int[n];
     next = new int[s];
