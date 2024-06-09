@@ -16,15 +16,16 @@ int celebrity(vector<vector<int>>& M, int n) {
         st.push(i);
     }
 
+    // Instead of creating knows function 
     while (st.size() > 1) {
         int a = st.top();
         st.pop();
         int b = st.top();
         st.pop();
 
-        if (knows(M, a, b)) {
+        if (knows(M, a, b)) { // if(M[a][b] == 1)
             st.push(b);
-        } else {
+        } else { // else if([b][a] == 1)
             st.push(a);
         }
     }
