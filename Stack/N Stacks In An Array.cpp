@@ -5,7 +5,7 @@
 class NStack {
     int *arr,*top, *next;
     int n, s;
-    int freeSpot;
+    int freeSpot; // Keep track of the next free index in the arr array where a new element can be pushed.
 public:
 
   NStack(int N, int S) {
