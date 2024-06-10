@@ -46,6 +46,7 @@ int sumSubarrayMins(vector<int>& arr) {
     return result;
 }
 
+// In how many subarrays an element is mnimum towards left and right
 // Input: 3, 1, 2, 4
 // Left: 1, 2, 1, 1 
 // Right: 1, 3, 2, 1
