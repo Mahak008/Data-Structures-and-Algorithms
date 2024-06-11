@@ -45,3 +45,8 @@ long long sumOfMaxAndMin(vector<int> &arr, int n, int k) {
   ans += arr[maxi.front()] + arr[mini.front()];
   return ans;
 }
+
+// Input: 1 2 3 4 5
+// Maxi - 3 4 5
+// Mini - 1 2 3
+// Output : 3 + 1 + 4 + 2 + 5 + 3 = 18
