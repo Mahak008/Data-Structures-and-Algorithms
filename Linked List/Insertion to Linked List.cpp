@@ -5,18 +5,35 @@ Node *insertAtBegining(Node *head, int x) {
   head = temp;
   return head;
 }
+
+//Function to insert a node at the position of the linked list.
+Node *insertAtPos(Node *head, int x) {
+  Node *n = new Node(x);
+  Node *temp = head;
+  int cnt = 0;
+  
+  while(cnt < pos && temp -> next != NULL) {
+    temp = temp -> next;
+  }
+
+  n -> next = temp -> next;
+  temp -> next = n;
+  return head;
+}
     
 //Function to insert a node at the end of the linked list.
 Node *insertAtEnd(Node *head, int x)  {
   Node *n = new Node(x);
   Node *temp = head;
+  
   if (head == NULL) { // Handle the case when the linked list is empty
     return n;
   }
-  while(temp->next != NULL) {
+  
+  while(temp -> next != NULL) {
     temp = temp -> next;
   }
        
-  temp->next = n;
+  temp -> next = n;
   return head;
 }
