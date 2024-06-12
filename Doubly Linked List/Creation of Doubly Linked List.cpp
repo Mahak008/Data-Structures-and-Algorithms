@@ -23,6 +23,7 @@ class Solution {
         Node * head = new Node(arr[0]) ;
         Node *temp = head;
         Node * pre = head;
+      
         for(int i = 1; i < arr.size(); i++) {
             Node * n = new Node(arr[i]);
             temp -> next = n;
@@ -33,10 +34,3 @@ class Solution {
         return head;
     }
 };
-
-        cout << "\n";
-    }
-    return 0;
-}
-
-// } Driver Code Ends
