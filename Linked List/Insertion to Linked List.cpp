@@ -7,13 +7,14 @@ Node *insertAtBegining(Node *head, int x) {
 }
 
 //Function to insert a node at the position of the linked list.
-Node *insertAtPos(Node *head, int x) {
+Node *insertAtPos(Node *head, int pos, int x) {
   Node *n = new Node(x);
   Node *temp = head;
-  int cnt = 0;
+  int cnt = 1;
   
   while(cnt < pos && temp -> next != NULL) {
     temp = temp -> next;
+    cnt++;
   }
 
   n -> next = temp -> next;
