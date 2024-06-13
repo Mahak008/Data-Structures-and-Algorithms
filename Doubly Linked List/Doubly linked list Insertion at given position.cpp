@@ -32,13 +32,18 @@ class Solution {
         
         // If last node is to be deleted
         if(temp -> next -> next == NULL) {
+            Node *del = temp -> next -> next;
             temp -> next = NULL;
+            delete del;
             return head;
         }
         
         // If node at any other position is to be delted
-        temp -> next = temp -> next -> next;
+        Node *del = temp -> next;
+        temp -> next = del -> next;
         temp -> next -> prev = temp;
+
+        delete del;
         return head;
     }
 };
