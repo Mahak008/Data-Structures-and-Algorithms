@@ -22,14 +22,12 @@ class Solution {
     Node* constructDLL(vector<int>& arr) {
         Node * head = new Node(arr[0]) ;
         Node *temp = head;
-        Node * pre = head;
       
         for(int i = 1; i < arr.size(); i++) {
             Node * n = new Node(arr[i]);
             temp -> next = n;
-            temp -> prev = pre;
+            n -> prev = temp;
             temp = temp -> next;
-            pre = pre -> next;
         }
         return head;
     }
