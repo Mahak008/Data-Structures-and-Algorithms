@@ -1,8 +1,15 @@
 //Function to insert a node at the beginning of the linked list.
 Node *insertAtBegining(Node *head, int x) {
-  Node *temp = new Node(x);
-  temp -> next = head;
-  head = temp;
+  Node *n = new Node(x);
+ 
+  // If the list is empty
+  if(head == NULL) {
+    head = n;
+    return head;
+  }
+  
+  n -> next = head;
+  head = n;
   return head;
 }
 
