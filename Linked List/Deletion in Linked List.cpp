@@ -1,6 +1,6 @@
 Node* deleteNode(Node *head,int x) {
     Node *temp = head;
-    if (head == NULL) {
+    if (head == NULL || head -> next == NULL) {
         return NULL;
     }
     
