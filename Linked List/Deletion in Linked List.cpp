@@ -1,9 +1,12 @@
 Node* deleteNode(Node *head,int x) {
     Node *temp = head;
+
+    // If the list is empty or there is only one node
     if (head == NULL || head -> next == NULL) {
         return NULL;
     }
-    
+
+    // Delete first node
     if (x == 1) {
         Node* temp = head;
         head = head->next;
@@ -18,7 +21,7 @@ Node* deleteNode(Node *head,int x) {
     }
     
     Node * del = temp -> next;
-    temp -> next = temp -> next -> next;
+    temp -> next = del -> next;
     
     delete del;
     return head;
