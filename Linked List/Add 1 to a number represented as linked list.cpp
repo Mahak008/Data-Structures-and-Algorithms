@@ -25,7 +25,5 @@ Node* addOne(Node *head) {
   return ans;
 }
 
-// Without Reversal
-
 // LinkedList: 4 -> 5 -> 6
 // Output: 457
