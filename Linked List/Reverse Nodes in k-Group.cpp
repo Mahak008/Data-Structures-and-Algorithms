@@ -13,6 +13,7 @@ ListNode* reverseList(ListNode* head) {
     head = prev;
     return head;
 }
+
 ListNode* getKNode(ListNode* temp, int k) {
     k -= 1;
     while (temp != NULL && k > 0) {
@@ -21,6 +22,7 @@ ListNode* getKNode(ListNode* temp, int k) {
     }
     return temp;
 }
+
 ListNode* reverseKGroup(ListNode* head, int k) {
     ListNode* temp = head;
     ListNode* prev = NULL;
@@ -37,11 +39,13 @@ ListNode* reverseKGroup(ListNode* head, int k) {
         ListNode* nextNode = kNode->next;
         kNode->next = NULL;
         reverseList(temp);
+        
         if (temp == head) {
             head = kNode;
         } else {
             prev->next = kNode;
         }
+        
         prev = temp;
         temp = nextNode;
     }
