@@ -1,3 +1,38 @@
+int getCount(ListNode* head) {
+    ListNode* temp = head;
+    int cnt = 0;
+    while (temp != NULL) {
+        temp = temp->next;
+        cnt++;
+    }
+    return cnt;
+}
+ListNode* collisionHead(ListNode* headA, ListNode* headB, int n) {
+    while (n) {
+        headB = headB->next;
+        n--;
+    }
+    while (headA != headB) {
+        headA = headA->next;
+        headB = headB->next;
+    }
+    return headA;
+}
+ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
+    int n1 = getCount(headA);
+    int n2 = getCount(headB);
+
+    if (n1 < n2) {
+        return collisionHead(headA, headB, n2 - n1);
+    } else {
+        return collisionHead(headB, headA, n1 - n2);
+    }
+
+    return NULL;
+}
+// Space - O(1)
+// Time - O(n1) + O(2n2)
+
 // Most Optimal Approach
 ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
     ListNode* temp1 = headA;
@@ -21,3 +56,6 @@ ListNode* getIntersectionNode(ListNode* headA, ListNode* headB) {
     }
     return NULL;
 }
+
+// Space - O(1)
+// Time - O(1)
