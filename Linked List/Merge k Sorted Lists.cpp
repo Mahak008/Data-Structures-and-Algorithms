@@ -1,12 +1,12 @@
 ListNode* mergeKLists(vector<ListNode*>& lists) {
-    priority_queue<pair<int, ListNode*>, vector<pair<int, ListNode*>>,
-                   greater<pair<int, ListNode*>>>
-        pq;
+    priority_queue<pair<int, ListNode*>, vector<pair<int, ListNode*>>, greater<pair<int, ListNode*>>>pq;
+    
     for (int i = 0; i < lists.size(); i++) {
         if (lists[i]) {
             pq.push({lists[i]->val, lists[i]});
         }
     }
+    
     ListNode* dummyNode = new ListNode(-1);
     ListNode* temp = dummyNode;
 
