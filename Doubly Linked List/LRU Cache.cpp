@@ -35,7 +35,7 @@ class LRUCache {
 
     void addToFront(Node* node) {
         node->next = head;
-        node->prev = nullptr;
+        node->prev = NULL;
         
         if (head)
             head->prev = node;
