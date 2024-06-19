@@ -4,6 +4,7 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
 
     ListNode* dummy = new ListNode(-1);
     ListNode* temp = dummy;
+    
     while (t1 != NULL && t2 != NULL) {
         if (t1->val <= t2->val) {
             temp->next = t1;
@@ -14,16 +15,19 @@ ListNode* mergeTwoLists(ListNode* list1, ListNode* list2) {
         }
         temp = temp->next;
     }
+    
     if (t1 != NULL) {
         temp->next = t1;
         temp = temp->next;
         t1 = t1->next;
     }
+    
     if (t2 != NULL) {
         temp->next = t2;
         temp = temp->next;
         t2 = t2->next;
     }
+    
     return dummy->next;
 }
 
