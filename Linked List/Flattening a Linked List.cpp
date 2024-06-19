@@ -1,3 +1,4 @@
+// Using Recursion
 Node* merge(Node* l1, Node* l2) {
     Node* dummyNode = new Node(-1);
     Node* res = dummyNode;
