@@ -9,7 +9,7 @@ int maxProfitAssignment(vector<int>& difficulty, vector<int>& profit,
     }
     sort(v.begin(), v.end());
 
-    // Preprocessing to ind the maximum profit till index i at constant time
+    // Preprocessing to find the maximum profit till index i at constant time
     for (int i = 1; i < v.size(); i++) {
         v[i].second = max(v[i].second, v[i - 1].second);
     }
