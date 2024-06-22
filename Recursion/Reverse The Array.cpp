@@ -1,3 +1,5 @@
+// Given an array of integers and a position ‘m’. You have to reverse the array after the mth position.
+
 vector<int> rev(vector<int>&arr, int l, int r) {
  while(l >= r) {
      return arr;
