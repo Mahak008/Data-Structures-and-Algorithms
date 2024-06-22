@@ -3,9 +3,8 @@ long long sumOfSeries(long long n) {
   if(n == 0) {
     return 0;
   }
-  ans += (n*n*n);
-  long long res = sumOfSeries(--n);
-  return ans + res;
+  long long res = (n*n*n) + sumOfSeries(--n);
+  return res;
 }
 
 // Input: n = 5
