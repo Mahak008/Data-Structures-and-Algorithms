@@ -1,3 +1,9 @@
+// It first compares the first element (a.first and b.first) of the pairs:
+// If a.first is greater than b.first, operator() returns true, meaning a should come before b in the priority queue (making it a max heap based on a.first).
+// If a.first equals b.first, it then compares the second element (a.second and b.second):
+// If a.second is less than b.second, operator() returns true, indicating a should come before b.
+// Otherwise, b should come before a.
+    
 class MyComp {
 public:
     bool operator()(pair<int, int> a, pair<int, int> b) {
