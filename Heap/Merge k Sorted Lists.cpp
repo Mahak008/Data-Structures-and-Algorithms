@@ -1,5 +1,7 @@
+typedef pair<int, ListNode*> p;
+
 ListNode* mergeKLists(vector<ListNode*>& lists) {
-    priority_queue<pair<int, ListNode*>, vector<pair<int, ListNode*>>, greater<pair<int, ListNode*>>>pq;
+    priority_queue<p, vector<p>, greater<p>>pq;
     
     for (int i = 0; i < lists.size(); i++) {
         if (lists[i]) {
