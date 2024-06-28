@@ -1,3 +1,5 @@
+// Permutation with Case Change
+
 void solve(string s, string output, int index, vector<string>& ans) {
     int n = s.length();
 
