@@ -1,3 +1,5 @@
+// Inductive Base Hypothesis
+
 int kthGrammar(int n, int k) {
     int len = pow(2, n - 1);
     int mid = len / 2;
