@@ -1,3 +1,5 @@
+// Inductive Base Hypothesis
+
 long long toh(int n, int from, int to, int aux) {
   if(n == 1) {
     cout << "move disk " << n << " from rod " << from << " to rod " << to << endl;
