@@ -25,8 +25,13 @@ string getPermutation(int n, int k) {
     return ans[k - 1];
 }
 
-// Optimized Approach
-
-
 // Input: n = 3, k = 3
 // Output: "213"
+
+// All Permutations
+// "123"
+// "132"
+// "213"
+// "231"
+// "312"
+// "321"
