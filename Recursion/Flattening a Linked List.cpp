@@ -24,6 +24,7 @@ Node* merge(Node* l1, Node* l2) {
     }
     return dummyNode->bottom;
 }
+
 Node *flatten(Node *head) {
     if(head == NULL || head->next == NULL) {
         return head;
