@@ -4,10 +4,10 @@ void solve(int n, string output, vector<string> &ans) {
     return;
   }
 
-  solve(n - 1, output, ans);
+  solve(n - 1, output + '0', ans);
 
   if (output.empty() || output.back() == '0') {
-    solve(n - 1, output, ans);
+    solve(n - 1, output + '1', ans);
   }
 }
 
