@@ -51,3 +51,15 @@ vector<vector<string>> solveNQueens(int n) {
     solve(0, n, board, ans);
     return ans;
 }
+
+// Input: n = 4
+// Output: . Q . .
+//         . . . Q
+//         Q . . .
+//         . . Q .
+  
+// Another Output  
+//         . . Q .
+//         Q . . .
+//         . . . Q
+//         . Q . . 
