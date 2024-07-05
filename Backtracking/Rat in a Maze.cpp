@@ -56,11 +56,11 @@ struct Direction {
 };
 
 void solve(int row, int col, vector<vector<int>> &m, int n, 
-  vector<vector<int>> visited, string move, vector<string>&ans, 
+  vector<vector<int>> visited, string next, vector<string>&ans, 
   vector<Direction>& dir) {
     
   if(row == n-1 && col == n - 1) {
-    ans.push_back(move);
+    ans.push_back(next);
     return;
   }    
         
@@ -80,8 +80,9 @@ void solve(int row, int col, vector<vector<int>> &m, int n,
     
 vector<string> findPath(vector<vector<int>> &m, int n) {
   vector<string>ans;
-  vector<vector<int>> visited(n, vector<int>(n, 0
+  vector<vector<int>> visited(n, vector<int>(n, 0));
   int row = 0, col = 0;
+  string next = "";
         
   vector<Direction> dir = {
     {{1, 0}, 'D'}, // Down
@@ -91,7 +92,7 @@ vector<string> findPath(vector<vector<int>> &m, int n) {
   };
         
   if(m[0][0] == 1) {
-    solve(row, col, m, n, visited, move, ans, dir);
+    solve(row, col, m, n, visited, next, ans, dir);
   }
         
   return ans;
