@@ -31,6 +31,46 @@ vector<int> nodesBetweenCriticalPoints(ListNode* head) {
     return {mini, maxi};
 }
 
+// Optimized Approach
+vector<int> nodesBetweenCriticalPoints(ListNode* head) {
+    if (!head || !head->next || !head->next->next) {
+        return {-1, -1};
+    }
+
+    ListNode* temp = head->next;
+    int prev = head->val;
+    int curr = temp->val;
+    int nVal = temp->next->val;
+
+    int mini = INT_MAX;
+    int firstPos = -1;
+    int prevPos = -1;
+
+    int i = 1;
+    vector<int> ans = {-1, -1};
+
+    while (temp->next != NULL) {
+        nVal = temp->next->val;
+
+        if ((prev > curr && curr < nVal) || (prev < curr && curr > nVal)) {
+            if (firstPos == -1) {
+                firstPos = i;
+            } else {
+                mini = min(mini, i - prevPos);
+                ans = {mini, i - firstPos};
+            }
+
+            prevPos = i;
+        }
+        i++;
+        prev = curr;
+        curr = nVal;
+        temp = temp->next;
+    }
+
+    return ans;
+}
+
 // Input: head = [5,3,1,2,5,1,2]
 // Output: [1,3]
 // Explanation: There are three critical points:
