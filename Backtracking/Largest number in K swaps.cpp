@@ -1,5 +1,5 @@
 void solve(string str, int k, int idx, string &ans) {
-    if(k == 0 || idx == str.length()) {
+    if(k == 0 || idx == str.length() - 1) {
         if (str.compare(ans) > 0) {
             ans = str;
         }
