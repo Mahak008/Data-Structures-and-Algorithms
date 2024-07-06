@@ -7,7 +7,6 @@
     <ul type="square">
       <li><a href = "https://www.youtube.com/playlist?list=PLgUwDviBIf0oF6QL8m22w1hIDC1vJ_BHz">Strivers A2Z-DSA Course | DSA Playlist | Placements</a></li>
       <li><a href = "https://www.youtube.com/@TheAdityaVerma/playlists">Aditya Verma</a></li>
-      <li><a href = "https://www.youtube.com/playlist?list=PLUcsbZa0qzu3yNzzAxgvSgRobdUUJvz7p">DSA-One Course - The Complete Data Structures and Algorithms</a></li>
       <li><a href = "https://www.youtube.com/playlist?list=PLDzeHZWIZsTryvtXdMr6rPh4IDexB5NIA">Complete C++ Placement DSA Course</a></li>
     </ul>
   </li>
