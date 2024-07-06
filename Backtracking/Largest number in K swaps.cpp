@@ -6,7 +6,8 @@ void solve(string str, int k, int idx, string &ans) {
         return;
     }
     
-     char maxChar = str[idx];
+    char maxChar = str[idx];
+    
     for (int i = idx + 1; i < str.length(); i++) {
         if (str[i] > maxChar) {
             maxChar = str[i];
