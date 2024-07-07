@@ -1,3 +1,5 @@
+// 2582. Pass the Pillow
+
 int passThePillow(int n, int time) {
     int pos = 1;
 
