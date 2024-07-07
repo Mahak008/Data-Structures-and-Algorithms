@@ -3,9 +3,9 @@ void preOrder(TreeNode *root, vector<int> &ans) {
     return;
   }
 
-  pre.push_back(root->data);
-  preOrder(root->left, pre);
-  preOrder(root->right, pre);
+  ans.push_back(root->data);
+  preOrder(root->left, ans);
+  preOrder(root->right, ans);
 }
 
 vector<int> preorderTraversal(TreeNode* root) {
