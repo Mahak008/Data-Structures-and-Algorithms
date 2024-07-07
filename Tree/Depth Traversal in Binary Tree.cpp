@@ -43,6 +43,13 @@ vector<vector<int>> getTreeTraversal(TreeNode *root) {
   return ans;
 }
 
+// Input
+//          1
+//        /   \
+//      3       4
+//    /  \     /  \
+//   5    2   7    6
+
 // The Inorder traversal will be [5, 3, 2, 1, 7, 4, 6].
 // The Preorder traversal will be [1, 3, 5, 2, 4, 7, 6].
 // The Postorder traversal will be [5, 2, 3, 7, 6, 4, 1].
