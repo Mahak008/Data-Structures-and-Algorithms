@@ -24,3 +24,12 @@ vector<int> preorderTraversal(TreeNode* root) {
 
     return ans;
 }
+
+// Input
+//          1
+//        /   \
+//      3       4
+//    /  \     /  \
+//   5    2   7    6
+
+// Output: 1, 3, 5, 2, 4, 7, 6
