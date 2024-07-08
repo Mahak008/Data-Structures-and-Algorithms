@@ -2,26 +2,30 @@ int maxHeight(TreeNode* root) {
     if (root == NULL) {
         return 0;
     }
+
     int lH = maxHeight(root->left);
+
+    if (lH == -1) {
+        return -1;
+    }
+
     int rH = maxHeight(root->right);
 
-    return 1 + max(lH, rH);
-}
-
-bool isBalanced(TreeNode* root) {
-    if (root == NULL) {
-        return true;
+    if (rH == -1) {
+        return -1;
     }
 
-    int x = maxHeight(root->left);
-    int y = maxHeight(root->right);
-
-    if (abs(x - y) > 1) {
-        return false;
+    if ((abs(lH - rH) > 1)) {
+        return -1;
     }
 
-    return isBalanced(root->left) && isBalanced(root->right);
+    return (1 + max(lH, rH));
 }
+
+bool isBalanced(TreeNode* root) { 
+    return maxHeight(root) != -1; 
+}
+
 
 // Input: root = [3,9,20,null,null,15,7]
 // Output: true
