@@ -35,3 +35,10 @@ vector <int> bottomView(Node *root) {
     return ans;
 }
 
+// Input:
+//          10
+//        /    \
+//       20    30
+//      /  \
+//     40   60
+// Output: 40 20 60 30
