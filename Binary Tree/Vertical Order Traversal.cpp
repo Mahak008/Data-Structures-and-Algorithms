@@ -1,5 +1,7 @@
 // Leetcode - 987
 
+// It is an ordered map which is sorted as per the x coordinates.
+
 vector<vector<int>> verticalTraversal(TreeNode* root) {
     map<int, map<int, multiset<int>>> nodes; // horizontal line, vertical line (level), node
     queue<pair<TreeNode*, pair<int, int>>> q; // node, horizontal line, vertical line
