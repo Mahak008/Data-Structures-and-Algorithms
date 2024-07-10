@@ -1,8 +1,8 @@
 // Leetcode - 987
 
 vector<vector<int>> verticalTraversal(TreeNode* root) {
-    map<int, map<int, multiset<int>>> nodes;
-    queue<pair<TreeNode*, pair<int, int>>> q;
+    map<int, map<int, multiset<int>>> nodes; // horizontal line, vertical line (level), node
+    queue<pair<TreeNode*, pair<int, int>>> q; // node, horizontal line, vertical line
 
     q.push({root, {0, 0}});
 
