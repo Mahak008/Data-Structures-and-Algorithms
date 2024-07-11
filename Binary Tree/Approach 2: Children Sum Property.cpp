@@ -35,3 +35,18 @@ void convertTree(Node* root) {
       increment(root, -diff);
   }
 }
+
+
+// Input:
+//           50
+//        /      \
+//       7        2
+//     /   \    /   \
+//    3     5  1    30
+
+// Output:
+//           50
+//        /      \
+//       19       31
+//     /   \    /    \
+//    14    5  1     30
