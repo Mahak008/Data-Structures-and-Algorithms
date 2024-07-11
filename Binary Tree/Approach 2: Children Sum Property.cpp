@@ -1,3 +1,13 @@
+// Recursive Depth-First Traversal (Preorder Traversal) Approach
+// Conversion Logic (convertTree Function):
+// It calculates the diff = left_data + right_data - root->data; 
+// if diif > 0, update root
+// If diff < 0, it recursively adjusts the subtree using the increment function.
+
+// Increment Function (increment):
+// Adjusts a given node and its descendants by a specified diff value.
+// It recursively adjusts the left or right child (if present) by adding diff to their data.
+
 void increment(Node* node, int diff)  { 
   if (node->left != nullptr) { 
     node->left->data = node->left->data + diff; 
