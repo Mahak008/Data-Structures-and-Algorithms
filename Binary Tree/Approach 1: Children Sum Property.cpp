@@ -3,9 +3,8 @@
 // If the sum of the children's values < root's value, leftChild = rightChild = value of root
 
 // Bottom-Up Correction:
-
 // After updating the node and its children, the function recursively calls itself on the left and right subtrees.
-// Once the recursion unwinds (returns back up the call stack), the values of the children nodes are summed and assigned back to the node to ensure that the parent's value is consistent with the sum of its children's values.
+// Once the recursion unwinds (returns back up the call stack), the values of the children nodes are summed and assigned back to the node.
 
 void convertTree(Node* root) {
     if(!root) return;
