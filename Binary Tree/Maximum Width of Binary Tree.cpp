@@ -10,8 +10,7 @@ int widthOfBinaryTree(TreeNode* root) {
 
     while (!q.empty()) {
         int size = q.size();
-        unsigned long long min_idx =
-            q.front().second; // to begin indexing with 0
+        unsigned long long min_idx = q.front().second; // to begin indexing with 0
         unsigned long long first, last;
 
         for (int i = 0; i < size; i++) {
@@ -19,11 +18,13 @@ int widthOfBinaryTree(TreeNode* root) {
             TreeNode* node = q.front().first;
             q.pop();
 
-            if (i == 0)
+            if (i == 0) {
                 first = cur_idx;
+            }    
 
-            if (i == size - 1)
+            if (i == size - 1) {
                 last = cur_idx;
+            }
 
             if (node->left) {
                 q.push({node->left, 2 * cur_idx + 1});
@@ -33,8 +34,10 @@ int widthOfBinaryTree(TreeNode* root) {
                 q.push({node->right, 2 * cur_idx + 2});
             }
         }
+        
         ans = max(ans, (int)(last - first + 1));
     }
+    
     return ans;
 }
 
