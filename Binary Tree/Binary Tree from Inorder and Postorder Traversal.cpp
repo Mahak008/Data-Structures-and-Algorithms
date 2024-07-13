@@ -30,5 +30,8 @@ TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
     return root;
 }
 
+// Time Complexity - O(N)
+// Space Complexity - O(N)
+
 // Input: inorder = [9,3,15,20,7], postorder = [9,15,7,20,3]
 // Output: [3,9,20,null,null,15,7]
