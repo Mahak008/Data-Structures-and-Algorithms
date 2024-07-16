@@ -112,6 +112,41 @@ vector<int> postorderTraversal(TreeNode* root) {
   return ans;
 }
 
+// Morris Traversal
+
+vector <int> postOrder(Node* root) {
+    vector<int>post;
+    Node*curr = root;
+  
+    while(curr != NULL) {
+        if(!curr->right) {
+            post.push_back(curr->data);
+            curr = curr->left;
+        }
+        else {
+            Node* prev = curr->right;
+            
+            while(prev->left && prev->left != curr) {
+                prev = prev->left;
+            }
+            
+            if(prev->left == NULL) {
+                post.push_back(curr->data);
+                prev->left = curr;
+                curr = curr->right;
+            }
+            else {
+                prev->left = NULL;
+                curr = curr->left;
+            }
+        }
+    }
+    
+    reverse(post.begin(), post.end());
+    return post;
+}
+
+
 // Input
 //          1
 //        /   \
