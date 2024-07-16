@@ -58,7 +58,7 @@ void flatten(TreeNode* root) {
                 prev = prev->right;
             }
 
-            prev->right = curr->right;
+            prev->right = curr->right; // rightmost element of left subtree is connected to right of curr
             curr->right = curr->left;
             curr->left = NULL;
         }
