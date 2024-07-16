@@ -53,23 +53,23 @@ vector<int> inorderTraversal(TreeNode* root) {
     TreeNode* cur = root;
 
     while(cur != NULL) {
-        if(!cur->left) {
+        if(!cur->left) { // if left = null, push root to vector and move the pointer to right
             inorder.push_back(cur->val);
             cur = cur->right;
-        } else {
-            TreeNode* prev = cur->left;
+        } else { // if left != null
+            TreeNode* prev = cur->left; // store curr->left to prev pointer
             
-            while(prev->right && prev->right != cur) {
-                prev = prev->right;
+            while(prev->right && prev->right != cur) { // find the rightmost node of left subtree
+                prev = prev->right; 
             }
             
             if(prev->right == NULL) {
-                prev->right = cur;
-                cur = cur->left;
+                prev->right = cur; // connect the rightmost node of left subtree to root
+                cur = cur->left; // move to left
             } else {
-                prev->right = NULL;
-                inorder.push_back(cur->val);
-                cur = cur->right;
+                prev->right = NULL; // break the thread
+                inorder.push_back(cur->val); // push the value of root to vector
+                cur = cur->right; // move to right
             }
         }    
     }
