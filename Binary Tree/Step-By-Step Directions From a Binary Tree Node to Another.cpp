@@ -91,6 +91,68 @@ public:
 
 // Optimal Approach
 
+class Solution {
+
+    TreeNode* lca(TreeNode* root, int startValue, int destValue) {
+        if (root == NULL || root->val == startValue || root->val == destValue) {
+            return root;
+        }
+
+        TreeNode* left = lca(root->left, startValue, destValue);
+        TreeNode* right = lca(root->right, startValue, destValue);
+
+        if (left != NULL && right != NULL) {
+            return root;
+        }
+        
+        return left != NULL ? left : right;
+    }
+
+    bool findPath(TreeNode* lca, int startValue, string& s) {
+        if (!lca)
+            return false;
+
+        if (lca->val == startValue)
+            return true;
+
+        s.push_back('L');
+        if(findPath(lca->left, startValue, s)) {
+            return true;
+        }
+
+        s.pop_back();
+
+        s.push_back('R');
+        if(findPath(lca->right, startValue, s)) {
+            return true;
+        }
+
+        s.pop_back();
+        return false;
+    }
+
+public:
+    string getDirections(TreeNode* root, int startValue, int destValue) {
+        TreeNode* lcaa = lca(root, startValue, destValue);
+
+        string lcaToSrc = "";
+        string lcaToDest = "";
+
+        findPath(lcaa, startValue, lcaToSrc);
+        findPath(lcaa, destValue, lcaToDest);
+
+        string res = "";
+
+        for (int i = 0; i < lcaToSrc.length(); i++) {
+            res += 'U';
+        }
+
+        res += lcaToDest;
+
+        return res;
+    }
+};
+
 // Input: root = [5,1,2,3,null,6,4], startValue = 3, destValue = 6
 // Output: "UURL"
 // Explanation: The shortest path is: 3 → 1 → 5 → 2 → 6.
