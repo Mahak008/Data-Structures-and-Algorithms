@@ -1,6 +1,5 @@
 class NodeValue {
-    public: 
-    
+    public:
     int minVal, maxVal, maxSize;
     
     NodeValue(int minVal, int maxVal, int maxSize) {
