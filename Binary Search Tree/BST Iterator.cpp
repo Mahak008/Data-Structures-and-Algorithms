@@ -1,28 +1,42 @@
 // Leetcode - 173
 
 class BSTIterator {
-    stack<TreeNode*>st;
+private:
+    stack<TreeNode*> st;
+    bool rev = true; // before
+    // rev = false => next
+
     void pushAll(TreeNode* root) {
-        while(root) {
+        while (root) {
             st.push(root);
-            root = root->left;
+            if (rev == true) {
+                root = root->right;
+            } else {
+                root = root->left;
+            }
         }
     }
+
 public:
-    BSTIterator(TreeNode* root) {
+    BSTIterator(TreeNode* root, bool reverse) {
+        rev = reverse;
         pushAll(root);
     }
-    
+
     int next() {
         TreeNode* temp = st.top();
         st.pop();
-        pushAll(temp->right);
+
+        if (!rev) {
+            pushAll(temp->right);
+        } else {
+            pushAll(temp->left);
+        }
+
         return temp->val;
     }
-    
-    bool hasNext() {
-        return !st.empty();
-    }
+
+    bool hasNext() { return !st.empty(); }
 };
 
 // Input
