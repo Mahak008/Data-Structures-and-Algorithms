@@ -1,3 +1,5 @@
+// Leetcode - 1380
+
 vector<int> luckyNumbers(vector<vector<int>>& matrix) {
     int n = matrix.size();
     int m = matrix[0].size();
@@ -35,3 +37,6 @@ vector<int> luckyNumbers(vector<vector<int>>& matrix) {
 
     return res;
 }
+
+// Input: matrix = [[3,7,8],[9,11,13],[15,16,17]]
+// Output: [15]
