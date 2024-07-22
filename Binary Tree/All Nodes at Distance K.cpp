@@ -1,6 +1,6 @@
 // Leetcode - 863
 
-void markParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*>& parent_track, TreeNode* target) {
+void markParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*>& parent_track) {
     queue<TreeNode*> q;
     q.push(root);
 
