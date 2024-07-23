@@ -1,7 +1,6 @@
 // Leetcode - 1110
 
-TreeNode* deleteNode(TreeNode* root, unordered_set<int>& s,
-                     vector<TreeNode*>& ans) {
+TreeNode* deleteNode(TreeNode* root, unordered_set<int>& s, vector<TreeNode*>& ans) {
     if (!root) {
         return NULL;
     }
