@@ -1,7 +1,6 @@
 // Leetcode - 652
 
-string getSubTreeString(TreeNode* root, unordered_map<string, int>& mp,
-                        vector<TreeNode*>& ans) {
+string getSubTreeString(TreeNode* root, unordered_map<string, int>& mp, vector<TreeNode*>& ans) {
     if (!root) {
         return "N";
     }
