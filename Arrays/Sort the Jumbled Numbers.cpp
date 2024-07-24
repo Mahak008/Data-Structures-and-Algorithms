@@ -1,5 +1,16 @@
 // Leetcode - 2191
 
+string getMaapedStr(string& num, vector<int>& mapping) {
+    string mappedNum = "";
+
+    for (int i = 0; i < num.length(); i++) {
+        char ch = num[i];
+        mappedNum += to_string(mapping[ch - '0']);
+    }
+
+    return mappedNum;
+}
+
 vector<int> sortJumbled(vector<int>& mapping, vector<int>& nums) {
     int n = nums.size();
     vector<pair<int, int>> temp;
