@@ -3,8 +3,7 @@
 // Time Limit Exceeded
 
 class Solution {
-    void markParents(TreeNode* root,
-                     unordered_map<TreeNode*, TreeNode*>& parent_track) {
+    void markParents(TreeNode* root, unordered_map<TreeNode*, TreeNode*>& parent_track) {
         queue<TreeNode*> q;
         q.push(root);
 
