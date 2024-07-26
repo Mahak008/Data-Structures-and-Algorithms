@@ -1,3 +1,13 @@
+class Node {
+	int data, height;
+	Node *left, *right;
+	Node(int x) {
+		data = x;
+		height = 1;
+		left = right = NULL;
+	}
+};
+
 int getHeight(Node* root) {
     if(!root) {
         return 0;
