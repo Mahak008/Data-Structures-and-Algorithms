@@ -48,7 +48,82 @@ Node* leftRotation(Node* root) {
     return child;
 }
 
-
+Node* deleteNode(Node* root, int data) {
+    if(!root) {
+        return NULL;
+    }
+    
+    if(data < root->data) {
+        root->left = deleteNode(root->left, data);
+    }
+    else if(data > root->data) {
+        root->right = deleteNode(root->right, data);
+    }
+    else {
+        // Leaf Node
+        if(!root->left && !root->right) {
+            delete root;
+            return NULL;
+        }
+        
+        // Only One Child exists
+        else if(root->left && !root->right) {
+            Node* temp = root->left;
+            delete root;
+            return temp;
+        }
+        
+        else if(!root->left && root->right) {
+            Node* temp = root->right;
+            delete root;
+            return temp;
+        }
+        
+        // Both Child Exists
+        else {
+            Node* curr = root->right;
+            
+            while(curr->left) {
+                curr = curr->left;
+            }
+            
+            root->data = curr->data;
+            root->right = deleteNode(root->right, curr->data);
+        }
+    }
+    
+    // Update the height
+    root->height = 1 + max(getHeight(root->left), getHeight(root->right));
+    
+    // Check the balance
+    int balance = getBalance(root);
+    
+    // Left Rotation
+    if(balance > 1) {
+        if(getBalance(root->left) >= 0) {
+            return rightRotation(root);
+        }
+        // Left Right Rotation
+        else if(getBalance(root->left) < 0) {
+            root->left = leftRotation(root->left);
+            return rightRotation(root);
+        }
+    }
+    
+    // Right Rotation
+    if(balance < -1) {
+        if(getBalance(root->right) <= 0) {
+            return leftRotation(root);
+        }
+        // Right Left Rotation
+        else if(getBalance(root->right) > 0) {
+            root->right = rightRotation(root->right);
+            return leftRotation(root);
+        }
+    }
+    
+    return root;
+}
 
 // Tree = 
 //         4
