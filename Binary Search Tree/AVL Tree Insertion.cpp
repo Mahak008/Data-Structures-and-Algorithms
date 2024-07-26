@@ -110,14 +110,16 @@ Node* insertToAVL(Node* root, int data) {
 // Explanation:
 // Value to be inserted = 5
 //     5
+
 // Value to be inserted = 1
 //     5
 //    /
 //   1
+ 
 // Value to be inserted = 4
-//   5                     4
-//  /    LR rotation        /  \
-// 1    ----------->       1   5
+//   5                        4
+//  /    LR rotation        /   \
+// 1    ----------->       1     5
 //  \
 //  4
 // Therefore the inorder of the final tree will be 1, 4, 5.
