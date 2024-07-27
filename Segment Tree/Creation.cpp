@@ -3,6 +3,7 @@ void buildTree(vector<int>& segTree, vector<int>& arr, int low, int high, int po
         segTree[pos] = arr[low];
         return;
     }
+    
     int mid = (low + high) / 2;
     buildTree(segTree, arr, low, mid, 2 * pos + 1);
     buildTree(segTree, arr, mid + 1, high, 2 * pos + 2);
