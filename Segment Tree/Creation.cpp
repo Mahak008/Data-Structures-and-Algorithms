@@ -35,6 +35,9 @@ int main() {
     cout << endl;
 }
 
+// Time - O(log N)
+// Space - O(N)
+
 // Segment Tree: 
 //             69 
 //       /            \
