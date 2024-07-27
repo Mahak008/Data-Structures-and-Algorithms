@@ -27,9 +27,11 @@ int main() {
 
     // Print the segment tree
     cout << "Segment Tree: " << endl;
+    
     for (int i = 0; i < max_size; ++i) {
         cout << segTree[i] << " ";
     }
+    
     cout << endl;
 }
 
