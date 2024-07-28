@@ -51,8 +51,6 @@ vector<int> querySum(int n, int arr[], int q, int queries[]) {
 
 // Output: 10 5
 
-// Explaination: In the first query we need sum 
-// from 1 to 4 which is 1+2+3+4 = 10. In the 
-// second query we need sum from 2 to 3 which is 
-// 2 + 3 = 5.
-
+// Explaination: 
+// In the first query we need sum from 1 to 4 which is 1+2+3+4 = 10. 
+// In the second query we need sum from 2 to 3 which is 2 + 3 = 5.
