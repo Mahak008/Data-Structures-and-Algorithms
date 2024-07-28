@@ -12,13 +12,11 @@ void buildTree(vector<int>& segTree, vector<int>& arr, int low, int high, int po
 
 int main() {
     vector<int> arr = {1, 3, 5, 7, 9, 11, 15, 18};
-    int n = arr.size();
+    int n = arr.size(); // Size of array
 
-    //Height of segment tree 
-    int x = (int)(ceil(log2(n))); 
+    int x = (int)(ceil(log2(n))); //Height of segment tree 
  
-    //Maximum size of segment tree 
-    int max_size = 2 * (int)pow(2, x) - 1; 
+    int max_size = 2 * (int)pow(2, x) - 1; //Maximum size of segment tree 
 
     vector<int> segTree(max_size, 0);
 
@@ -27,7 +25,6 @@ int main() {
 
     // Print the segment tree
     cout << "Segment Tree: " << endl;
-    
     for (int i = 0; i < max_size; ++i) {
         cout << segTree[i] << " ";
     }
