@@ -31,15 +31,13 @@ void update(vector<int>&segTree, vector<int>&arr, int low, int high, int pos, in
 
 int main() {
     vector<int>arr = {1, 3, 5, 7, 9, 11, 15, 18};
+    int n = arr.size(); // size of array
 
-    int n = arr.size();
+    int x = ceil(log2(n)); // height of tree
 
-    int x = ceil(log2(n));
-
-    int size = 2 * (int)(pow(2, x)) - 1;
+    int size = 2 * (int)(pow(2, x)) - 1; // total nodes in tree
 
     vector<int>segTree(size, 0);
-
     buildTree(segTree, arr, 0, n - 1, 0);
 
     cout << "Original Segment Tree: " << endl;
@@ -49,6 +47,7 @@ int main() {
 
     cout << endl << endl;
 
+    // Update Query
     int idx = 1;
     int value = 10;
     update(segTree, arr, 0, n - 1, 0, idx, value);
