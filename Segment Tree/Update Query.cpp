@@ -1,6 +1,3 @@
-#include<bits/stdc++.h>
-using namespace std;
-
 void buildTree(vector<int>&segTree, vector<int>&arr, int low, int high, int pos) {
     if(low == high) {
         segTree[pos] = arr[low];
@@ -66,3 +63,23 @@ int main() {
     return 0;
 }
 
+// Time - O(log N)
+// Space - O(N)
+
+// Original Segment Tree: 
+//             69 
+//       /            \
+//     16             53
+//   /     \         /   \
+//  4      12       20    33
+// /  \   /  \     /  \   / \
+// 1  3  5    7   9   11 15 18 
+
+// Updated Segment Tree: 
+//             76 
+//       /            \
+//     23             53
+//   /     \         /   \
+//  11      12       20    33
+// /  \    /  \     /  \   / \
+// 1  10  5    7   9   11 15 18 
