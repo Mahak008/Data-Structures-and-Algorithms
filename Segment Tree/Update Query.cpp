@@ -25,7 +25,7 @@ void update(vector<int>&segTree, vector<int>&arr, int low, int high, int pos, in
         update(segTree, arr, low, mid, 2 * pos + 1, idx, value);
     }
     else {
-        update(segTree, arr, low, mid, 2 * pos + 2, idx, value);
+        update(segTree, arr, mid + 1, high, 2 * pos + 2, idx, value);
     }
 }
 
