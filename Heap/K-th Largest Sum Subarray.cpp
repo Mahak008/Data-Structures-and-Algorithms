@@ -21,3 +21,15 @@ int getKthLargest(vector<int> &arr, int k) {
 
   return pq.top();
 }
+
+// Input: k = 3, arr = 3 -2 5
+// Output: 3
+
+// Explanation: 
+// Sum of [0, 0] = 3
+// Sum of [0, 1] = 1
+// Sum of [0, 2] = 6
+// Sum of [1, 1] = -2
+// Sum of [1, 2] = 3
+// Sum of [2, 2] = 5
+// All sum of subarrays are {6, 5, 3, 3, 1, -2} where the third largest element is 3.
