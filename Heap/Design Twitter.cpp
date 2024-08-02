@@ -1,5 +1,13 @@
 // Leetcode - 355
 
+class compare {
+public:
+    bool operator()(const vector<int>& a, const vector<int>& b) {
+        // Compare by time (a[0] > b[0]) for max-heap (latest tweets first)
+        return a[0] < b[0];
+    }
+};
+
 class Twitter {
 public:
     unordered_map<int, unordered_set<int>> follower;
@@ -14,52 +22,58 @@ public:
 
     vector<int> getNewsFeed(int userId) {
         vector<int> res;
-        auto cmp = [](const tuple<int, int, int, int>& a,
-                      const tuple<int, int, int, int>& b) {
-            return get<0>(a) < get<0>(b); // max-heap based on time
-        };
-        priority_queue<tuple<int, int, int, int>,
-                       vector<tuple<int, int, int, int>>, decltype(cmp)>
-            pq(cmp);
+        priority_queue<vector<int>, vector<vector<int>>, compare> pq;
 
-        auto addTweets = [&](int id) {
-            if (tweets.find(id) != tweets.end()) {
-                const auto& tweetList = tweets[id];
+        // Add user's own tweets
+        if (tweets.find(userId) != tweets.end()) {
+            const auto& tweetList = tweets[userId];
+            if (!tweetList.empty()) {
+                // Start from the most recent tweet
+                pq.push({tweetList.back().first, tweetList.back().second,
+                         userId, static_cast<int>(tweetList.size()) - 1});
+            }
+        }
+
+        // Add followers' tweets
+        for (int followerId : follower[userId]) {
+            if (tweets.find(followerId) != tweets.end()) {
+                const auto& tweetList = tweets[followerId];
                 if (!tweetList.empty()) {
+                    // Start from the most recent tweet
                     pq.push({tweetList.back().first, tweetList.back().second,
-                             id, tweetList.size() - 1});
+                             followerId,
+                             static_cast<int>(tweetList.size()) - 1});
                 }
             }
-        };
-
-        addTweets(userId);
-
-        for (int followerId : follower[userId]) {
-            addTweets(followerId);
         }
 
+        // Collect up to 10 most recent tweets
         while (!pq.empty() && res.size() < 10) {
-            auto [tweetTime, tweetId, userId, tweetIndex] = pq.top();
+            auto tweet = pq.top();
             pq.pop();
-            res.push_back(tweetId);
-            if (tweetIndex > 0) {
+            res.push_back(tweet[1]);
+
+            int userId = tweet[2];
+            int index = tweet[3] - 1;
+
+            if (index >= 0) {
                 const auto& tweetList = tweets[userId];
-                pq.push({tweetList[tweetIndex - 1].first,
-                         tweetList[tweetIndex - 1].second, userId,
-                         tweetIndex - 1});
+                pq.push({tweetList[index].first, tweetList[index].second,
+                         userId, index});
             }
         }
+
         return res;
     }
 
     void follow(int followerId, int followeeId) {
-        if (followerId != followeeId) { // a user should not follow themselves
+        if (followerId != followeeId) { // A user should not follow themselves
             follower[followerId].insert(followeeId);
         }
     }
 
     void unfollow(int followerId, int followeeId) {
-        if (followerId != followeeId) { // a user should not unfollow themselves
+        if (followerId != followeeId) { // A user should not unfollow themselves
             follower[followerId].erase(followeeId);
         }
     }
