@@ -43,6 +43,9 @@ int leastInterval(vector<char>& tasks, int n) {
     return time;
 }
 
+// Time - O(N)
+// Space - O(1)
+
 // Input: tasks = ["A","A","A","B","B","B"], n = 2
 // Output: 8
 // Explanation: A possible sequence is: A -> B -> idle -> A -> B -> idle -> A -> B.
