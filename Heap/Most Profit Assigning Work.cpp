@@ -1,3 +1,5 @@
+// Leetcode - 826
+
 int maxProfitAssignment(vector<int>& difficulty, vector<int>& profit, vector<int>& worker) {
     int n = difficulty.size();
     int m = worker.size();
