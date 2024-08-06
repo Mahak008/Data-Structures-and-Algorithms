@@ -1,6 +1,22 @@
 // Leetcode - 3016
 
+int minimumPushes(string word) {
+    vector<int> freq(26, 0);
 
+    for (char ch : word) {
+        freq[ch - 'a']++;
+    }
+
+    sort(freq.begin(), freq.end(), greater<int>());
+    int ans = 0;
+
+    for (int i = 0; i < 26; i++) {
+        int press = i / 8 + 1;
+        ans += (freq[i] * press);
+    }
+
+    return ans;
+}
 
 // Input: word = "xyzxyzxyzxyz"
 // Output: 12
