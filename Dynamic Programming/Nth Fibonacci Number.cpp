@@ -1,35 +1,67 @@
 // Leetcode - 509
 
-const int mod = 1e9 + 7;
-int solve(int n, vector<int>&dp) {
-    if(n <= 1) {
-        return n;
+const long long MOD = 1e9+7;
+
+// Memoization
+// Time - O(N)
+// Space - O(N)
+
+long long solve(vector<long long> &dp, int n) {
+    if(n == 0) {
+        return 0;
+    }
+    
+    if(n == 1 || n == 2) {
+        return 1;
     }
     
     if(dp[n] != -1) {
         return dp[n];
     }
     
-    return dp[n] = (solve(n-1, dp) + solve(n-2, dp)) % mod;
+    dp[n] = (solve(dp, n-1) + solve(dp, n-2)) % MOD;
+    return dp[n];
 }
 
-int nthFibonacci(int n){
-    if (n == 0) {
+long long int topDown(int n) {
+    if(n < 0) {
+        return 0; 
+    }
+    
+    vector<long long>dp(n+1, -1);
+        
+    long long ans = solve(dp, n);
+        
+    return ans;
+}
+
+// Tabulation
+
+long long int bottomUp(int n) {
+    if(n < 0) {
         return 0;
     }
     
-    if (n == 1 || n == 2) {
+    if(n == 0) {
+        return 0;
+    }
+    
+    if(n == 1){
         return 1;
     }
-
-    vector<int>dp(n + 1, -1);
+    
+    long long a = 0;
+    long long b = 1;
+    long long sum = 0;
         
-    return solve(n, dp);
+    for(int i = 2; i <= n; i++) {
+        sum = (a + b) % MOD;
+        a = b;
+        b = sum;
+    }
+        
+    return sum;
 }
-
-// Memoization
-// Time - O(N)
-// Space - O(N)
 
 // Input: n = 5
 // Output: 5
