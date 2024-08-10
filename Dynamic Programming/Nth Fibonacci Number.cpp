@@ -1,6 +1,4 @@
-// Memoization
-// Time - O(N)
-// Space - O(N)
+// Leetcode - 509
 
 const int mod = 1e9 + 7;
 int solve(int n, vector<int>&dp) {
@@ -28,6 +26,10 @@ int nthFibonacci(int n){
         
     return solve(n, dp);
 }
+
+// Memoization
+// Time - O(N)
+// Space - O(N)
 
 // Input: n = 5
 // Output: 5
