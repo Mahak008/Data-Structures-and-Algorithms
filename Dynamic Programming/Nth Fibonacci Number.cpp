@@ -1,3 +1,7 @@
+// Memoization
+// Time - O(N)
+// Space - O(N)
+
 const int mod = 1e9 + 7;
 int solve(int n, vector<int>&dp) {
     if(n <= 1) {
@@ -24,6 +28,9 @@ int nthFibonacci(int n){
         
     return solve(n, dp);
 }
+
+// Tabulation
+
 
 // Input: n = 5
 // Output: 5
