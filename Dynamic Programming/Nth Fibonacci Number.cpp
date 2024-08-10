@@ -29,8 +29,5 @@ int nthFibonacci(int n){
     return solve(n, dp);
 }
 
-// Tabulation
-
-
 // Input: n = 5
 // Output: 5
