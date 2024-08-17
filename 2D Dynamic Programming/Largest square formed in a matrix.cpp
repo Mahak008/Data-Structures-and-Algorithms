@@ -35,3 +35,12 @@ int maxSquare(int n, int m, vector<vector<int>> mat) {
 //        [1, 1]]
 // Output: 2
 // Explanation: The maximum length of a side of the square sub-matrix is 2. The matrix itself is the maximum sized sub-matrix in this case.
+
+// Input: n = 6, m = 5
+// mat = [[0, 1, 1, 0, 1], 
+//        [1, 1, 0, 1, 0],
+//        [0, 1, 1, 1, 0],
+//        [1, 1, 1, 1, 0],
+//        [1, 1, 1, 1, 1],
+//        [0, 0, 0, 0, 0]]
+// Output: 3
