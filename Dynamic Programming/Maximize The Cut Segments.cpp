@@ -20,3 +20,7 @@ int maximizeTheCuts(int n, int x, int y, int z) {
     int ans = solve(n,x,y,z,dp);
     return max(ans,0);
 }
+
+// Input: n = 5, x = 5, y = 3, z = 2
+// Output: 2
+// Explanation: Here total length is 5, and the cut lengths are 5, 3 and 2. We can make two segments of lengths 3 and 2.
