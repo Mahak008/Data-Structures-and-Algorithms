@@ -16,7 +16,9 @@ int longestKSubstr(string s, int k) {
       ++l;
     }
     
-    maxLen = max(maxLen, (r-l+1));
+    if(mp.size() == k) {
+        maxLen = max(maxLen, (r - l + 1));
+    }
     ++r;
   }
   return maxLen;
