@@ -7,7 +7,7 @@ int getLucky(string s, int k) {
 
     for (const char& i : s) {
         int result = (i & NUM);
-        st += to_string(result);
+        st += to_string(result); // st += to_string(i - 'a' + 1);
     }
 
     while (k > 0) {
